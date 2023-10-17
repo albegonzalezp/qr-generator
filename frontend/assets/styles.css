@@ -108,3 +108,29 @@ h1 {
 }
 
 
+/* Add media queries to adjust the layout and styles for smaller screens */
+
+@media (max-width: 768px) {
+  /* Center the container horizontally and vertically */
+  .container {
+    margin: 0 auto;
+  }
+
+  /* Make the container 100% wide on smaller screens */
+  .container,
+  .qr-form,
+  .qr-display {
+    width: 100%;
+  }
+
+  /* Make the QR code smaller on smaller screens */
+  #qr-container {
+    width: 128px;
+    height: 128px;
+  }
+
+  /* Adjust the font size of the QR code heading on smaller screens */
+  .qr-display h3 {
+    font-size: 1.5rem;
+  }
+}
