@@ -1,6 +1,9 @@
 package main
 
 import (
+	"log"
+	"os"
+
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -12,6 +15,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	// Get values from .env file
+	host := os.Getenv("HOST")
+	port := os.Getenv("PORT")
+	from := os.Getenv("FROM")
+	password := os.Getenv("PASSWORD")
+
+	log.Printf("host: %s, port: %s, from: %s, password: %s\n", host, port, from, password)
 
 	Config = InitEmailConfig()
 

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/url"
 	"os"
 	"strconv"
@@ -52,17 +51,9 @@ func SendEmail(email string, qr *Qr) error {
 
 	d := gomail.NewDialer(Config.Host, Config.Port, Config.Username, Config.Password)
 
-	
-
 	// Send the email
 	if err := d.DialAndSend(m); err != nil {
-		log.Println("Could not send email: ", err)
-		log.Println("Email config host: ", Config.Host)
-		log.Println("Email config port: ", Config.Port)
-		log.Println("Email config username: ", Config.Username)
-		log.Println("Email config password: ", Config.Password)
-
-		return fmt.Errorf("Could not send email: %v\nEmail host: %s\nEmail port: %s\nEmail username: %s\nEmail password: %s\n", err, Config.Host, Config.Port, Config.Username, Config.Password)
+		return fmt.Errorf("Could not send email: %v", err)
 	}
 
 	return nil
