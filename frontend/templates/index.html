@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/frontend/assets/styles.css" />
+    <script src="/frontend/assets/index.js"></script>
+    <title>Qr Generator</title>
+  </head>
+  <body>
+    <h1>QR Code Generator</h1>
+    <div class="container">
+      <div class="qr-form">
+        <form id="qr-input-form" action="" onsubmit="validateForm()">
+          <div class="input-field">
+            <label for="qr-name">Qr Name</label>
+            <input type="text" name="qr-name" id="qr-name" />
+          </div>
+
+          <div class="input-field">
+            <label for="qr-url">Link in QR</label>
+            <input type="text" name="qr-url" id="qr-url" required />
+          </div>
+
+          <div class="input-field">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required />
+          </div>
+
+          <div class="input-field">
+            <label for="qr-extension">Image Type</label>
+            <select name="qr-extension" id="qr-extension">
+              <option value="png">PNG</option>
+              <option value="jpg">JPG</option>
+            </select>
+          </div>
+        </form>
+        <button id="get-qr" onclick="getQR()" type="submit">Generate QR</button>
+      </div>
+      <div class="qr-display">
+        <h3>Your QR:</h3>
+
+        <div id="qr-container">
+          <img id="qr" src="" alt="" name="" />
+        </div>
+
+        <div class="button-container">
+          <button id="download" onclick="downloadQr()" disabled type="button">
+            Download QR
+          </button>
+          <button
+            id="send_email"
+            data-link=""
+            data-name=""
+            onclick="sendQrToEmail()"
+            disabled
+            type="submit"
+          >
+            Send to Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

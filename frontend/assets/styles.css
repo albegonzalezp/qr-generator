@@ -1,0 +1,110 @@
+
+body {
+  background-color: rgb(237, 237, 233);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container, .qr-form, .qr-display {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  /*Center in the middle of screen and add some padding*/
+  background-color: rgb(214, 204, 194);
+  padding: 1em;
+  margin: auto;
+  width: 80%;
+  height: auto;
+  display: flex;
+}
+
+.qr-form,
+.qr-display {
+  background-color: rgb(245, 235, 224);
+  padding: 1em;
+  margin: 1em;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
+  margin: 1em;
+  width: 70%;
+  height: auto;
+  flex-direction: column;
+}
+
+.qr-form input, select {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  margin: 7px;
+}
+
+.qr-form label {
+  font-weight: bold; /* Optionally style the labels */
+}
+
+.qr-form button, .qr-display button {
+  font-size: 1em;
+  font-display: bold;
+  padding: 0.5em;
+  height: auto;
+  width: 90%;
+  margin-left: 1em;
+  background-color: rgb(227, 213, 202);
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+
+  /* Center the button horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#get-qr {
+  margin: auto;
+}
+
+/* Apply hover effect only when the button is not disabled */
+.qr-form button:not([disabled]):hover,
+.qr-display button:not([disabled]):hover {
+  background-color: rgb(213, 189, 175); /* Change background color on hover */
+  color: white;
+}
+
+
+.qr-display h3 {
+  margin: none;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ margin-top: 30px;
+}
+
+.qr-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#qr-container {
+  width: 256px;
+  height: 256px;
+  background-color: beige;
+}
+
+
