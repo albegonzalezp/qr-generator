@@ -18,17 +18,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o myapp .
 # Create the final image
 FROM alpine:latest
 
-# Set environment variables
-ENV HOST=smtp.gmail.com
-ENV PORT=587
-ENV FROM=qrgenerator0@gmail.com
-ENV PASSWORD=sbknrzlqqsetztkq
-ENV SUBJECT=": by zetacoder"
-ENV BODY="Hi! Here is your <b>QR code</b> attached for the link you provided.<br><br>Regards,<br>ZetaCoder"
-ENV TEMPLATES_DIR=C:\\Users\\zalbe\\Desktop\\go-workspace\\src\\github.com\\zetacoder\\personal\\qr-generator\\frontend\\templates
-ENV STATIC_DIR=C:\\Users\\zalbe\\Desktop\\go-workspace\\src\\github.com\\zetacoder\\personal\\qr-generator\\frontend\\assets
-ENV IMAGES_DIR=C:\\Users\\zalbe\\Desktop\\go-workspace\\src\\github.com\\zetacoder\\personal\\qr-generator\\backend\\qr_images
-
 
 # Set the working directory
 WORKDIR /app
