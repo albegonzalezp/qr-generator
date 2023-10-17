@@ -2,6 +2,9 @@
 
 Create QR codes effortlessly with our easy-to-use QR code generator. Whether you want to render a QR code, download it, or send it via SMTP, this tool has you covered.
 
+## ONLINE DEMO:
+https://qr-generator-service.onrender.com/
+
 ## Getting Started
 To get started, follow these simple steps:
 
