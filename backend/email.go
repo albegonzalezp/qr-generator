@@ -46,7 +46,7 @@ func SendEmail(email string, qr *Qr) error {
 	m := gomail.NewMessage()
 	m.SetHeader("From", Config.Username)
 	m.SetHeader("To", email)
-	m.SetHeader("Subject", fmt.Sprintf("%s : by zetacoder", qr.QrName))
+	m.SetHeader("Subject", fmt.Sprintf("%s", qr.QrName))
 	m.SetBody("text/html", "Here is the <b>QR code</b> you requested.<br>Enjoy it!<br>Regards,<br>zetacoder")
 	m.Attach(path)
 
