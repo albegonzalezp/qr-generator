@@ -17,8 +17,6 @@ type EmailConfig struct {
 	Port     int    `json:"port"`
 	Username string `json:"username"`
 	Password string `json:"password"`
-	Subject  string `json:"subject"`
-	Body     string `json:"body"`
 }
 
 func InitEmailConfig() *EmailConfig {
@@ -31,8 +29,6 @@ func InitEmailConfig() *EmailConfig {
 		Port:     port,
 		Username: os.Getenv("FROM"),
 		Password: os.Getenv("PASSWORD"),
-		Subject:  os.Getenv("SUBJECT"),
-		Body:     os.Getenv("BODY"),
 	}
 }
 
@@ -50,8 +46,8 @@ func SendEmail(email string, qr *Qr) error {
 	m := gomail.NewMessage()
 	m.SetHeader("From", Config.Username)
 	m.SetHeader("To", email)
-	m.SetHeader("Subject", fmt.Sprintf("%s %s", qr.QrName, Config.Subject))
-	m.SetBody("text/html", Config.Body)
+	m.SetHeader("Subject", fmt.Sprintf("%s : by zetacoder", qr.QrName))
+	m.SetBody("text/html", "Here is the <b>QR code</b> you requested.<br>Enjoy it!<br>Regards,<br>zetacoder")
 	m.Attach(path)
 
 	d := gomail.NewDialer(Config.Host, Config.Port, Config.Username, Config.Password)
