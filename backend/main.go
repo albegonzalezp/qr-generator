@@ -18,7 +18,7 @@ func main() {
 
 	// Get values from .env file
 	host := os.Getenv("HOST")
-	port := os.Getenv("PORT")
+	port := os.Getenv("EMAIL_PORT")
 	from := os.Getenv("FROM")
 	password := os.Getenv("PASSWORD")
 

@@ -19,7 +19,7 @@ type EmailConfig struct {
 }
 
 func InitEmailConfig() *EmailConfig {
-	port, err := strconv.Atoi(os.Getenv("PORT"))
+	port, err := strconv.Atoi(os.Getenv("EMAIL_PORT"))
 	if err != nil {
 		panic(err)
 	}
