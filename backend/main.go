@@ -1,9 +1,6 @@
 package main
 
 import (
-	"os"
-	"path/filepath"
-
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -21,16 +18,13 @@ func main() {
 	r := gin.Default()
 
 	// Load HTML templates
-	templatesDir := os.Getenv("TEMPLATES_DIR")
-	r.LoadHTMLGlob(filepath.Join(templatesDir, "*"))
+	r.LoadHTMLGlob("../frontend/templates/*")
 
 	// Serve static files .js and .css
-	staticDir := os.Getenv("STATIC_DIR")
-	r.Static("../frontend/assets", staticDir)
+	r.Static("../frontend/assets", "../frontend/assets")
 
 	// Serve images
-	imagesDir := os.Getenv("IMAGES_DIR")
-	r.Static("./qr_images", imagesDir)
+	r.Static("./qr_images", "./qr_images")
 
 	r.GET("/", RenderIndex)
 	r.POST("/get-qr", RenderQr)
