@@ -40,13 +40,13 @@ Open a web browser and navigate to http://localhost:8080 (by default if running 
 - Use the QR for the purpose that fit you best!
 --------------------------------------------------
 
-##**Features**
+## **Features**
 1. Easy-to-Use: A user-friendly interface for generating QR codes.
 2. Render QR Codes: View the QR code directly in your browser.
 3. Download: Save the QR code as an image file for offline use.
 4. Email Sending: Send the QR code via email using SMTP.
 
-##**Contributing**
+## **Contributing**
 If you'd like to contribute to this project, please follow these guidelines:
 
 1. Fork the repository
@@ -54,6 +54,6 @@ If you'd like to contribute to this project, please follow these guidelines:
 3. Commit your changes and push them to your fork
 4. Submit a pull request
 
-##**Contact**
+## **Contact**
 If you have any questions or feedback, please contact Alberto Gonzalez at albertoigp93@gmail.com
 Enjoy creating QR codes with our simple and efficient QR code generator!
