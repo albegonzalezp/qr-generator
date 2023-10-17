@@ -116,11 +116,11 @@ h1 {
     margin: 0 auto;
   }
 
-  /* Make the container 100% wide on smaller screens */
-  .container,
-  .qr-form,
-  .qr-display {
-    width: 100%;
+ 
+
+  /*If .qr-display exceeds the widt, put it belowe the .qr-form*/
+  .container {
+    flex-direction: column;
   }
 
   /* Make the QR code smaller on smaller screens */
