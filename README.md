@@ -10,17 +10,15 @@ To get started, follow these simple steps:
    git clone https://github.com/zetacoder/qr-generator.git
    cd qr-generator/backend
 
-
 2. **Install Dependencies**:
    ```sh
    go mod tidy
 
-
 3. **Configure the directories and env variables**:
 - Go to **/qr-generator/backend**
 - Check `.env.example` and set the email configuration you want to use and directories to load templates.
-- IMPORTANT: To be able to send emails trough SMTP, you must set the password to use SMTP click [here](https://support.google.com/mail/answer/185833?hl=en#app-passwords) and add it to **PASSWORD** in `.env` file.
-- Save it and change the name to `.env`
+- IMPORTANT: To be able to send emails trough SMTP, you must configure the password in your account. Click [here](https://support.google.com/mail/answer/185833?hl=en#app-passwords) to know how to do it. After that add it to **PASSWORD** in `.env.example`.
+- Once all done, save the file as `.env` so can be readed by the app.
 
 
 5.` **Run the Application**:
