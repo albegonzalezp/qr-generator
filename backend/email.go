@@ -52,6 +52,14 @@ func SendEmail(email string, qr *Qr) error {
 
 	d := gomail.NewDialer(Config.Host, Config.Port, Config.Username, Config.Password)
 
+	sendCloser, err := d.Dial()
+	if err != nil {
+		log.Println("Could not connect to the email server: ", err)
+		return fmt.Errorf("Could not connect to the email server: %v", err)
+	}
+
+	defer sendCloser.Close()
+
 	// Send the email
 	if err := d.DialAndSend(m); err != nil {
 		log.Println("Could not send email: ", err)
