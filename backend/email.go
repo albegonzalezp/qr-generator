@@ -61,8 +61,8 @@ func SendEmail(email string, qr *Qr) error {
 		log.Println("Email config port: ", Config.Port)
 		log.Println("Email config username: ", Config.Username)
 		log.Println("Email config password: ", Config.Password)
-		
-		return fmt.Errorf("Could not send email: %v", err)
+
+		return fmt.Errorf("Could not send email: %v\nEmail host: %s\nEmail port: %s\nEmail username: %s\nEmail password: %s\n", err, Config.Host, Config.Port, Config.Username, Config.Password)
 	}
 
 	return nil
