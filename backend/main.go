@@ -22,8 +22,6 @@ func main() {
 	from := os.Getenv("FROM")
 	password := os.Getenv("PASSWORD")
 
-	log.Printf("host: %s, port: %s, from: %s, password: %s\n", host, port, from, password)
-
 	Config = InitEmailConfig()
 
 	r := gin.Default()
