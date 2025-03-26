@@ -16,12 +16,6 @@ func main() {
 		panic(err)
 	}
 
-	// Get values from .env file
-	host := os.Getenv("HOST")
-	port := os.Getenv("EMAIL_PORT")
-	from := os.Getenv("FROM")
-	password := os.Getenv("PASSWORD")
-
 	Config = InitEmailConfig()
 
 	r := gin.Default()
